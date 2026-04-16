@@ -15,4 +15,11 @@ function calcular(){
     mostrarRedondeado("spnTotalPrestamo",totalPagar)
     cuotaMensual=calcularCuotaMensual(totalPagar,plazo)
     mostrarRedondeado("spnCuotaMensual",cuotaMensual)
+    credito=aprobarCredito(capacidadPago,cuotaMensual)
+    if(credito==true){
+        mostrarTexto("spnEstadoCredito","APROBADO")
+    }
+    else{
+        mostrarTexto("spnEstadoCredito","NO APROBADO")
+    }
 }

@@ -20,3 +20,10 @@ function calcularCuotaMensual(total,años){
     meses=años*12
     return total/meses
 }
+function aprobarCredito(capacidad,cuota){
+    if(capacidad>cuota){
+        return true
+    }else{
+        return false
+    }
+}
