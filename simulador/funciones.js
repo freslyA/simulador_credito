@@ -10,3 +10,6 @@ function calcularDisponible(ingresos,egresos){
 function calcularCapacidadPago(montoDisponible){
     return montoDisponible/2
 }
+function calcularInteresSimple(monto,tasa,años){
+    return (años*monto)*(tasa/100)
+}

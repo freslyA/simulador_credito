@@ -13,3 +13,8 @@ function mostrarRedondeado(texto,numero){
     numeroRedondeado=numero.toFixed(2)
     mostrar.innerHTML=numeroRedondeado
 }
+function recuperarNumeroEntero(texto){
+    let numero=document.getElementById(texto)
+    numeroEntero=parseInt(numero.value)
+    return numeroEntero
+}
