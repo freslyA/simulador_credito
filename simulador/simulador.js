@@ -11,4 +11,6 @@ function calcular(){
     interes=recuperarNumeroEntero("txtTasaInteres")
     interesSimple=calcularInteresSimple(monto,interes,plazo)
     mostrarRedondeado("spnInteresPagar",interesSimple)
+    totalPagar=calcularTotalPagar(monto,interesSimple)
+    mostrarRedondeado("spnTotalPrestamo",totalPagar)
 }
