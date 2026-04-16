@@ -3,5 +3,7 @@ function calcular(){
     ingresos=recuperarNumero("txtIngresos")
     egresos=recuperarNumero("txtEgresos")
     disponible=calcularDisponible(ingresos,egresos)
-    mostrarTexto("spnDisponible",disponible)
+    mostrarRedondeado("spnDisponible",disponible)
+    capacidadPago=calcularCapacidadPago(disponible)
+    mostrarRedondeado("spnCapacidadPago",capacidadPago)
 }
