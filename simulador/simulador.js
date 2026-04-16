@@ -13,4 +13,6 @@ function calcular(){
     mostrarRedondeado("spnInteresPagar",interesSimple)
     totalPagar=calcularTotalPagar(monto,interesSimple)
     mostrarRedondeado("spnTotalPrestamo",totalPagar)
+    cuotaMensual=calcularCuotaMensual(totalPagar,plazo)
+    mostrarRedondeado("spnCuotaMensual",cuotaMensual)
 }

@@ -16,3 +16,7 @@ function calcularInteresSimple(monto,tasa,años){
 function calcularTotalPagar(monto,interes){
     return monto+interes+100
 }
+function calcularCuotaMensual(total,años){
+    meses=años*12
+    return total/meses
+}
