@@ -18,3 +18,7 @@ function recuperarNumeroEntero(texto){
     numeroEntero=parseInt(numero.value)
     return numeroEntero
 }
+function borrarTexto(texto){
+    let mostrar=document.getElementById(texto)
+    mostrar.value=""
+}

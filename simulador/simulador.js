@@ -23,3 +23,16 @@ function calcular(){
         mostrarTexto("spnEstadoCredito","NO APROBADO")
     }
 }
+function reiniciar(){
+    borrarTexto("txtIngresos","")
+    borrarTexto("txtEgresos","")
+    mostrarTexto("spnDisponible","")
+    mostrarTexto("spnCapacidadPago","")
+    borrarTexto("txtMonto","")
+    borrarTexto("txtPlazo","")
+    borrarTexto("txtTasaInteres","")
+    mostrarTexto("spnInteresPagar","")
+    mostrarTexto("spnTotalPrestamo","")
+    mostrarTexto("spnCuotaMensual","")
+    mostrarTexto("spnEstadoCredito","ANALIZANDO...")
+}

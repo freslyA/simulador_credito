@@ -1,70 +1,159 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-p {
-    margin-top: 10px;
+/* FONDO GLOBAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #002f6c 0%, #004aad 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* TARJETA PRINCIPAL */
+.container {
+    width: 440px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* HEADER TIPO BANCO */
+.container::before {
+    content: "Banco Pichincha";
+    display: block;
+    background: #002f6c;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 18px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* CONTENIDO INTERNO */
+.container > * {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #002f6c;
+    font-size: 22px;
+}
+
+/* SECCIONES */
+h2 {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #004aad;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffd100;
+    padding-bottom: 5px;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f7f9fc;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #004aad;
+    background: #ffffff;
+    box-shadow: 0 0 6px rgba(0,74,173,0.3);
+    outline: none;
+}
+
+/* RESULTADOS */
+p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* VALORES */
 span {
     font-weight: bold;
-    color: #2c3e50;
+    color: #002f6c;
 }
 
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-button {
-    width: 48%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
+/* ESTADO */
+#spnEstadoCredito {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ffd100;
+    color: #002f6c;
     font-weight: bold;
-    cursor: pointer;
 }
 
+/* BOTONES */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 12px;
+    padding-bottom: 25px;
+}
+
+/* BOTÓN PRINCIPAL */
+button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ffd100;
+    color: #002f6c;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
 button:hover {
-    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* BOTÓN SECUNDARIO */
+#btnReiniciar {
+    background: #e0e0e0;
+    color: #333;
+}
+
+#btnReiniciar:hover {
+    background: #cfcfcf;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
 }
