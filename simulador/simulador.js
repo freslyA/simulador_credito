@@ -1,8 +1,12 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
 function calcular(){
     ingresos=recuperarNumero("txtIngresos")
-    egresos=recuperarNumero("txtEgresos")
-    disponible=calcularDisponible(ingresos,egresos)
+    arriendo=recuperarNumero("txtArriendo")
+    comida=recuperarNumero("txtAlimentacion")
+    varios=recuperarNumero("txtVarios")
+    gastos=sumarGastos(arriendo,arriendo,varios)
+    mostrarRedondeado("gastos",gastos)
+    disponible=calcularDisponible(ingresos,gastos)
     mostrarRedondeado("spnDisponible",disponible)
     capacidadPago=calcularCapacidadPago(disponible)
     mostrarRedondeado("spnCapacidadPago",capacidadPago)

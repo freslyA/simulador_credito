@@ -27,3 +27,35 @@ function aprobarCredito(capacidad,cuota){
         return false
     }
 }
+function sumarGastos(a1,a2,a3){
+    return a1+a2+a3
+}
+function validarNumero(input){
+    let valor = input.value;
+    let error = input.nextElementSibling; // el <small> debajo
+
+    // limpiar mensaje
+    error.textContent = "";
+
+    if(valor === ""){
+        error.textContent = "El campo no puede estar vacío";
+        return false;
+    }
+
+    if(isNaN(valor)){
+        error.textContent = "Solo se permiten números";
+        return false;
+    }
+
+    if(Number(valor) < 0){
+        error.textContent = "No se permiten negativos";
+        return false;
+    }
+
+    if(valor.length > 5){
+        error.textContent = "Máximo 5 caracteres";
+        return false;
+    }
+
+    return true;
+}

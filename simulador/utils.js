@@ -1,8 +1,7 @@
 function recuperarNumero(texto){
     let numero=document.getElementById(texto)
     numeroFloat=parseFloat(numero.value)
-    redondeado=numeroFloat.toFixed(2)
-    return redondeado
+    return numeroFloat
 }
 function mostrarTexto(texto,mensaje){
     let mostrar=document.getElementById(texto)
@@ -21,4 +20,8 @@ function recuperarNumeroEntero(texto){
 function borrarTexto(texto){
     let mostrar=document.getElementById(texto)
     mostrar.value=""
+}
+function recuperarTexto(id){
+    mensaje=document.getElementById(id)
+    return mensaje.value
 }
